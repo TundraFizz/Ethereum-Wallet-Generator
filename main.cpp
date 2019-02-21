@@ -105,17 +105,19 @@ int main(){
     char* publicKey_ = Wrapper(privateKey_);
     char* address_ = PublicKeyToAddress(publicKey_);
 
-    if(address_[2] == '0' &&
-       address_[3] == '0' &&
-       address_[4] == '0' &&
-       address_[5] == '0' &&
-       address_[6] == '0' &&
-       address_[7] == '0'){
-      // if(true){
+    if(address_[2]  == '0' &&
+       address_[3]  == '0' &&
+       address_[4]  == '0' &&
+       address_[5]  == '0' &&
+       address_[6]  == '0' &&
+       address_[7]  == '0' &&
+       address_[8]  == '0' &&
+       address_[9]  == '0'/*&&
+       address_[10] == '0'*/){
       char* privateKeyString_ = PrivateKeyToString(privateKey_);
 
       std::ofstream outfile;
-      outfile.open("test.txt", std::ios_base::app);
+      outfile.open("addresses.txt", std::ios_base::app);
       outfile << address_ << "," << privateKeyString_ << "\n";
       std::cout << address_ << "," << privateKeyString_ << "\n";
       delete[] privateKeyString_;
