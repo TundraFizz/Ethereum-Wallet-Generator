@@ -109,11 +109,10 @@ int main(){
        address_[3]  == '0' &&
        address_[4]  == '0' &&
        address_[5]  == '0' &&
-       address_[6]  == '0'/* &&
+       address_[6]  == '0' &&
        address_[7]  == '0' &&
        address_[8]  == '0' &&
-       address_[9]  == '0'&&
-       address_[10] == '0'*/){
+       address_[9]  == '0'){
       char* privateKeyString_ = PrivateKeyToString(privateKey_);
 
       std::ofstream outfile;
